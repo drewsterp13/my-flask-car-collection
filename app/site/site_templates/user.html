@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="d-flex flex-column align-items-center bg-dark text-light text-center m-0">
+    <div class="container bg-light text-dark text-center mt-5 mb-5 m-0">
+        <div class="row p-0">
+            <div class="col-md d-flex flex-column justify-content-center text-center">
+                <h2 class="">{{ current_user.first_name }} {{ current_user.last_name }}'s</h2>
+                <h3 class="">User Profile</h3>
+                <ul class="list-unstyled d-flex flex-column justify-content-evenly">
+                    <li class="text-center d-flex flex-column justify-content evenly"><h6 class="mb-0">Email: {{ current_user.email }}</h6></li>
+                    <li class="text-center d-flex flex-column justify-content evenly"><h6 class="mb-0">Token: {{ current_user.token }}</h6></li>
+                </ul>
+            </div>
+            <div class="col-lg order-lg-first  p-0">
+                <img class="w-100 p-0" src="..//static/images/user-profile-photo.jpg" alt="A BMW parked">
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
